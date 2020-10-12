@@ -1,0 +1,1 @@
+new class{constructor(l){this.name=l}hello(){console.log("Hello "+this.name)}}("ErezOren").hello(),bar=20,console.log(10);
