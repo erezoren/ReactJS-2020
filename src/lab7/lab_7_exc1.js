@@ -7,7 +7,7 @@ class LightBulb{
     }
 
      on(){
-        this.bulbElem.className = "blink"; 
+        this.bulbElem.className = "lighten"; 
     }
 
     off(){

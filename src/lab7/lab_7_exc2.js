@@ -33,4 +33,4 @@ const race = new Race(c1, c2);
 race.add(c3);
 
 // prints: And the winner is... green
-console.log(race.getWinner());
+console.log('And the winner is...'+race.getWinner().color);
