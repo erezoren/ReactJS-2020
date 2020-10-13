@@ -32,5 +32,5 @@ const c3 = new Car('red', 24);
 const race = new Race(c1, c2);
 race.add(c3);
 
-// prints: And the winner is... green
+
 console.log('And the winner is...'+race.getWinner().color);
