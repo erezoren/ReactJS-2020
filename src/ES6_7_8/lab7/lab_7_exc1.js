@@ -1,24 +1,25 @@
 class LightBulb{
     constructor(divElement){
         this.divElement=divElement;
-        this.bulbElem= document.createElement("DIV");                
-        this.bulbElem.className = "normal"; 
-        this.bulbElem.innerHTML = '<p>OFF</p>'; 
+        this.bulbElem= document.createElement("div");
+        this.off()
         this.divElement.appendChild(this.bulbElem);    
     }
 
      on(){
         this.bulbElem.className = "lighten"; 
-        this.bulbElem.innerHTML = '<p>ON</p>'; 
+        this.bulbElem.textContent = 'ON';
     }
 
     off(){
         this.bulbElem.className = "normal"; 
-        this.bulbElem.innerHTML = '<p>OFF</p>'; 
+        this.bulbElem.textContent = 'OFF';
     }
 
 }
 
 
-const lb = new LightBulb(document.querySelector('div'));
-const lb2 = new LightBulb(document.querySelector('div'));
+const bulbDiv = document.querySelector("div");
+
+const lb = new LightBulb(bulbDiv);
+const lb2 = new LightBulb(bulbDiv);
