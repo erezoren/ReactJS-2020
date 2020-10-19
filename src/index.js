@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import '../css/main.css';
 import TextList from "./lab11/1/TextList";
 import TimeConverter from "./lab11/2/TimeConverter";
+import GuessingGame from "./lab11/3/GuessingGame";
 
 const App = () => {
 
@@ -14,6 +15,9 @@ const App = () => {
         <hr/>
         <p>Exercise 2</p>
         <TimeConverter/>
+        <hr/>
+        <p>Exercise 3</p>
+        <GuessingGame/>
       </div>
   )
 };
