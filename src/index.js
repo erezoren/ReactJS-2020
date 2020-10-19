@@ -1,27 +1,19 @@
-class Person{
-    constructor(name){
-        this.name=name;
-    }
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-    hello(){
-        console.log('Hello ' +this.name)
-    }
-}
+import '../css/main.css';
+import TextList from "./lab11/TextList";
 
-const  p = new Person("ErezOren");
-p.hello();
+const App = () => {
 
-
-
-function demo(){
-    if (2<5){
-        var foo=10;
-        bar=20;
-    }
-    console.log(foo);
-
-}
-
-demo();
+  return (
+      <div>
+      <TextList/>
+  </div>
+)
+};
 
 
+// main.js
+const root = document.querySelector('main');
+ReactDOM.render(<App />, root);
