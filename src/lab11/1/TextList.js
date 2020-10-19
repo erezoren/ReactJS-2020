@@ -20,8 +20,12 @@ export default function TextList(props) {
         {
           getInputs(5)
         }
-
       </div>
   );
 
 }
+
+  let count=0;
+  function* counter(){
+    yield count++;
+  };
