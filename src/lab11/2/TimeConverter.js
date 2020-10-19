@@ -4,13 +4,20 @@ export default function TimeConverter(props) {
 
   const [seconds, setSeconds] = useState(0);
 
+  const multipliers = {
+    SECONDS: "SECONDS",
+    MINUTES: "MINUTES",
+    HOURS: "HOURS"
+
+  }
+
   function updateTime(multiplier, value) {
     switch (multiplier) {
 
-      case "minuts":
+      case multipliers.MINUTES:
         setSeconds(value * 60);
         break;
-      case "hours":
+      case multipliers.HOURS:
         setSeconds(value * 3600);
         break;
 
@@ -24,13 +31,13 @@ export default function TimeConverter(props) {
         <label>Seconds</label>
         <input key={"seconds"} type={"text"} value={seconds}
                onChange={(e) => updateTime(
-                   'seconds', e.target.value)}/>
+                   multipliers.SECONDS, e.target.value)}/>
         <label>Minuts</label>
-        <input key={"minuts"} type={"text"} value={seconds / 60}
+        <input key={multipliers.MINUTES} type={"text"} value={seconds / 60}
                onChange={(e) => updateTime(
                    'minuts', e.target.value)}/>
         <label>Hours</label>
-        <input key={"hours"} type={"text"} value={seconds / 3600}
+        <input key={multipliers.HOURS} type={"text"} value={seconds / 3600}
                onChange={(e) => updateTime(
                    'hours', e.target.value)}/>
 
