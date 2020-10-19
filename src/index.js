@@ -5,6 +5,7 @@ import '../css/main.css';
 import TextList from "./lab11/1/TextList";
 import TimeConverter from "./lab11/2/TimeConverter";
 import GuessingGame from "./lab11/3/GuessingGame";
+import ColorPicker from "./lab11/4/ColorPicker";
 
 const App = () => {
 
@@ -18,6 +19,9 @@ const App = () => {
         <hr/>
         <p>Exercise 3</p>
         <GuessingGame/>
+        <hr/>
+        <p>Exercise 4</p>
+        <ColorPicker/>
       </div>
   )
 };
