@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 const tinycolor = require("tinycolor2");
 
-export default function ColorPicker2() {
+export const ColorPicker2 = () => {
 
   const [color, setColor] = useState("#b81925");
 
@@ -32,7 +32,8 @@ export default function ColorPicker2() {
   return (
       <div>
         <div>
-          <input value={color} type={"color"} onChange={(e) => setColor(e.target.value)}/>
+          <input value={color} type={"color"}
+                 onChange={(e) => setColor(e.target.value)}/>
           <div>
             {
               paintDivs()
@@ -42,7 +43,5 @@ export default function ColorPicker2() {
         </div>
       </div>
   );
-
-
 
 }

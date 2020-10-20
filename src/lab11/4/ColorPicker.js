@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function ColorPicker(props) {
+export const ColorPicker = (props) => {
 
   const [color, setColor] = useState(props.bgColor || "#b81925");
   const pickerSize = {

@@ -2,30 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import '../css/main.css';
-import TextList from "./lab11/1/TextList";
-import TimeConverter from "./lab11/2/TimeConverter";
-import GuessingGame from "./lab11/3/GuessingGame";
-import ColorPicker from "./lab11/4/ColorPicker";
-import ColorPicker2 from "./lab11/5/ColorPicker2";
+
+import {Exercise} from "./common/Exercise";
+import {TextList} from "./lab11/1/TextList";
+import {TimeConverter} from "./lab11/2/TimeConverter";
+import {GuessingGame} from "./lab11/3/GuessingGame";
+import {ColorPicker} from "./lab11/4/ColorPicker";
+import {ColorPicker2} from "./lab11/5/ColorPicker2";
 
 const App = () => {
 
   return (
       <div>
-        <p>Exercise 1</p>
-        <TextList/>
-        <hr/>
-        <p>Exercise 2</p>
-        <TimeConverter/>
-        <hr/>
-        <p>Exercise 3</p>
-        <GuessingGame/>
-        <hr/>
-        <p>Exercise 4</p>
-        <ColorPicker/>
-        <hr/>
-        <p>Exercise 5</p>
-        <ColorPicker2/>
+        <Exercise title={"Exercise 1"}>
+          <TextList/>
+        </Exercise>
+        <Exercise title={"Exercise 2"}>
+          <TimeConverter/>
+        </Exercise>
+        <Exercise title={"Exercise 3"}>
+          <GuessingGame/>
+        </Exercise>
+        <Exercise title={"Exercise 4"}>
+          <ColorPicker/>
+        </Exercise>
+        <Exercise title={"Exercise 5"}>
+          <ColorPicker2/>
+        </Exercise>
       </div>
   )
 };

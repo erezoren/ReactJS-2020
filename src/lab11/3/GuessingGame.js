@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function GuessingGame(props) {
+export const GuessingGame = (props) => {
 
   const [message, setMessage] = useState('');
   const [randNum, setRandNum] = useState(Math.floor(Math.random() * 1000 + 1));
@@ -25,10 +25,10 @@ export default function GuessingGame(props) {
 
   return (
       <div>
-        <div><label>הכנס מספר</label></div>
+        <div><h3>הכנס מספר בין 1 ל 1000</h3></div>
         <input key={"guess"} type={"number"}
                onChange={(e) => checkGuess(e.target.value)}/>
-        <div><label>{message}</label></div>
+        <div><h3>{message}</h3></div>
 
 
       </div>

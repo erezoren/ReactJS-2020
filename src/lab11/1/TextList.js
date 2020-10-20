@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function TextList(props) {
+export const TextList = (props) => {
 
   const [text, setText] = useState('');
 
@@ -25,7 +25,8 @@ export default function TextList(props) {
 
 }
 
-  let count=0;
-  function* counter(){
-    yield count++;
-  };
+let count = 0;
+
+function* counter() {
+  yield count++;
+};

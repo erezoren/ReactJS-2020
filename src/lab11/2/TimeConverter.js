@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function TimeConverter(props) {
+export const TimeConverter = (props) => {
 
   const [seconds, setSeconds] = useState(0);
 
