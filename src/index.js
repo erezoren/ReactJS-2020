@@ -9,11 +9,13 @@ import {TimeConverter} from "./lab11/2/TimeConverter";
 import {GuessingGame} from "./lab11/3/GuessingGame";
 import {ColorPicker} from "./lab11/4/ColorPicker";
 import {ColorPicker2} from "./lab11/5/ColorPicker2";
+import {Container} from "./lab16/1/Container";
 
 const App = () => {
 
   return (
       <div>
+        <h2>**********Lab 11**********</h2>
         <Exercise title={"Exercise 1"}>
           <TextList/>
         </Exercise>
@@ -28,6 +30,10 @@ const App = () => {
         </Exercise>
         <Exercise title={"Exercise 5"}>
           <ColorPicker2/>
+        </Exercise>
+        <h2>**********Lab 16**********</h2>
+        <Exercise title={"Exercise 1"}>
+        <Container/>
         </Exercise>
       </div>
   )
