@@ -11,6 +11,7 @@ import {ColorPicker} from "./lab11/4/ColorPicker";
 import {ColorPicker2} from "./lab11/5/ColorPicker2";
 import {Container} from "./lab16/1/Container";
 import {ListContainer} from "./lab16/2/ListContainer";
+import {MyForm} from "./lab16/3/MyForm";
 
 const App = () => {
 
@@ -38,6 +39,9 @@ const App = () => {
         </Exercise>
         <Exercise title={"Exercise 2"}>
           <ListContainer/>
+        </Exercise>
+        <Exercise title={"Exercise 3"}>
+          <MyForm/>
         </Exercise>
       </div>
   )
