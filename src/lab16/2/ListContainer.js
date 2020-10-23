@@ -1,0 +1,26 @@
+import React, {useEffect, useState} from "react";
+import {ListDisplay} from "./ListDisplay";
+import {SearchBox} from "./SearchBox";
+
+export const ListContainer = () => {
+
+  const itemList = ['ball', 'coffee', 'plant']
+  const [search, setSearch] = useState('');
+  const [list, setList] = useState(itemList);
+
+  useEffect(() => {
+    const filtered = itemList.filter(item => {
+      return item.indexOf(search) > -1
+    })
+    setList(filtered);
+  }, [search]);
+
+  return (
+      <div>
+        <div><SearchBox searchCallback={(value) => setSearch(value)}/></div>
+        <h3>Results:</h3>
+        <div><ListDisplay list={list}/></div>
+      </div>
+  );
+
+}

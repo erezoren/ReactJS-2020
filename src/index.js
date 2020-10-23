@@ -10,6 +10,7 @@ import {GuessingGame} from "./lab11/3/GuessingGame";
 import {ColorPicker} from "./lab11/4/ColorPicker";
 import {ColorPicker2} from "./lab11/5/ColorPicker2";
 import {Container} from "./lab16/1/Container";
+import {ListContainer} from "./lab16/2/ListContainer";
 
 const App = () => {
 
@@ -33,7 +34,10 @@ const App = () => {
         </Exercise>
         <h2>**********Lab 16**********</h2>
         <Exercise title={"Exercise 1"}>
-        <Container/>
+          <Container/>
+        </Exercise>
+        <Exercise title={"Exercise 2"}>
+          <ListContainer/>
         </Exercise>
       </div>
   )
