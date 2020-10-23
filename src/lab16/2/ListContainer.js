@@ -19,7 +19,10 @@ export const ListContainer = () => {
       <div>
         <div><SearchBox searchCallback={(value) => setSearch(value)}/></div>
         <h3>Results:</h3>
-        <div><ListDisplay list={list}/></div>
+        <div>
+          {list.length > 0 ? <ListDisplay list={list}/> : <h2
+              style={{color: 'red'}}>No Results</h2>}
+        </div>
       </div>
   );
 
