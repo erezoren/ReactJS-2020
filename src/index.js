@@ -17,23 +17,6 @@ const App = () => {
 
   return (
       <div>
-        <h2>**********Lab 11**********</h2>
-        <Exercise title={"Exercise 1"}>
-          <TextList/>
-        </Exercise>
-        <Exercise title={"Exercise 2"}>
-          <TimeConverter/>
-        </Exercise>
-        <Exercise title={"Exercise 3"}>
-          <GuessingGame/>
-        </Exercise>
-        <Exercise title={"Exercise 4"}>
-          <ColorPicker/>
-        </Exercise>
-        <Exercise title={"Exercise 5"}>
-          <ColorPicker2/>
-        </Exercise>
-        <h2>**********Lab 16**********</h2>
         <Exercise title={"Exercise 1"}>
           <Container/>
         </Exercise>
