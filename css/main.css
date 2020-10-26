@@ -1,0 +1,7 @@
+body {
+  background: beige;
+}
+
+table, tr, td {
+  border: black solid 1px;
+}
