@@ -6,8 +6,8 @@ export const ListDisplay = (props) => {
   return (
         <ol>
         {
-          list.map((item)=>{
-           return <li style={{fontSize:"30px"}}>{item}</li>
+          list.map((item,index)=>{
+           return <li key={index}  style={{fontSize:"30px"}}>{item}</li>
           })
         }
         </ol>

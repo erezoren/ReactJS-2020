@@ -25,7 +25,7 @@ export const Game = ({setScore, score}) => {
       const bg = {
         background: index == randNum ? "red" : "gray"
       }
-      return <div
+      return <div key={index}
           onClick={() => setScore(index == randNum ? score + 10 : score - 5)}
           style={{...baseStyle, ...bg}}/>;
     })
