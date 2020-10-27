@@ -8,9 +8,7 @@ export const Container = () => {
 
   return (
       <div>
-        <Game updateScoreCallback={(win) => {
-          setScore(win ? score + 10 : score - 5)
-        }}/>
+        <Game setScore={setScore} score={score}/>
         <Score score={score}/>
         <button onClick={() => setScore(0)}>משחק חדש</button>
       </div>

@@ -10,8 +10,8 @@ import {GuessingGame} from "./lab11/3/GuessingGame";
 import {ColorPicker} from "./lab11/4/ColorPicker";
 import {ColorPicker2} from "./lab11/5/ColorPicker2";
 import {Container} from "./lab16/1/Container";
-import {ListContainer} from "./lab16/2/ListContainer";
 import {MyForm} from "./lab16/3/MyForm";
+import {ListContainer} from "./lab16/2/ListContainer";
 import {SortableTable} from "./lab19/1/SortableTable";
 
 const App = () => {
@@ -22,6 +22,9 @@ const App = () => {
     [2, 'anna', 'Israel', 'anna@gmail.com'],
     [3, 'zina', 'UK', 'zina@gmail.com'],
   ];
+
+
+  const exc2ItemList = ['ball', 'coffee', 'plant']
   return (
       <div>
         <h2>**********Lab 11**********</h2>
@@ -45,7 +48,7 @@ const App = () => {
           <Container/>
         </Exercise>
         <Exercise title={"Exercise 2"}>
-          <ListContainer/>
+          <ListContainer itemList={exc2ItemList}/>
         </Exercise>
         <Exercise title={"Exercise 3"}>
           <MyForm/>
