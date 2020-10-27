@@ -4,16 +4,13 @@ import ReactDOM from 'react-dom';
 import '../css/main.css';
 
 import {Exercise} from "./common/Exercise";
-import {TextList} from "./lab11/1/TextList";
-import {TimeConverter} from "./lab11/2/TimeConverter";
-import {GuessingGame} from "./lab11/3/GuessingGame";
-import {ColorPicker} from "./lab11/4/ColorPicker";
-import {ColorPicker2} from "./lab11/5/ColorPicker2";
 import {Container} from "./lab16/1/Container";
-import {ListContainer} from "./lab16/2/ListContainer";
 import {MyForm} from "./lab16/3/MyForm";
+import {ListContainer} from "./lab16/2/ListContainer";
 
 const App = () => {
+
+  const exc2ItemList = ['ball', 'coffee', 'plant']
 
   return (
       <div>
@@ -21,7 +18,7 @@ const App = () => {
           <Container/>
         </Exercise>
         <Exercise title={"Exercise 2"}>
-          <ListContainer/>
+          <ListContainer itemList={exc2ItemList}/>
         </Exercise>
         <Exercise title={"Exercise 3"}>
           <MyForm/>

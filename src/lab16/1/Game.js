@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
-export const Game = (props) => {
+export const Game = ({setScore, score}) => {
 
   const [randNum, setRandNum] = useState(0);
-
-  const {updateScoreCallback} = props;
 
   const baseStyle = {
     width: "50px",
@@ -13,32 +11,30 @@ export const Game = (props) => {
   };
 
   useEffect(() => {
-    let sinterval = setInterval(() => {
+    let interval = setInterval(() => {
       setRandNum(Math.floor(Math.random() * 10 + 1));
     }, 2000);
 
     return () => {
-      clearInterval(sinterval);
+      clearInterval(interval);
     }
   }, [randNum]);
 
-  function paintDivs() {
-    let divs = [];
-    for (let i = 1; i <= 10; i++) {
+  function createGame() {
+    return Array.apply(null, Array(10)).map((entry, index) => {
       const bg = {
-        background: i == randNum ? "red" : "gray"
+        background: index == randNum ? "red" : "gray"
       }
-      divs.push(<div onClick={() => updateScoreCallback(i == randNum)}
-                     style={{...baseStyle, ...bg}}/>)
+      return <div
+          onClick={() => setScore(index == randNum ? score + 10 : score - 5)}
+          style={{...baseStyle, ...bg}}/>;
+    })
 
-    }
-
-    return divs;
   }
 
   return (
       <div>
-        {paintDivs()}
+        {createGame()}
       </div>
   );
 
