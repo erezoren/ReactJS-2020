@@ -1,27 +1,32 @@
-class Person{
-    constructor(name){
-        this.name=name;
-    }
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-    hello(){
-        console.log('Hello ' +this.name)
-    }
-}
+import '../css/main.css';
 
-const  p = new Person("ErezOren");
-p.hello();
+import {Exercise} from "./common/Exercise";
+import {Container} from "./lab16/1/Container";
+import {MyForm} from "./lab16/3/MyForm";
+import {ListContainer} from "./lab16/2/ListContainer";
 
+const App = () => {
 
+  const exc2ItemList = ['ball', 'coffee', 'plant']
 
-function demo(){
-    if (2<5){
-        var foo=10;
-        bar=20;
-    }
-    console.log(foo);
+  return (
+      <div>
+        <Exercise title={"Exercise 1"}>
+          <Container/>
+        </Exercise>
+        <Exercise title={"Exercise 2"}>
+          <ListContainer itemList={exc2ItemList}/>
+        </Exercise>
+        <Exercise title={"Exercise 3"}>
+          <MyForm/>
+        </Exercise>
+      </div>
+  )
+};
 
-}
-
-demo();
-
-
+// main.js
+const root = document.querySelector('main');
+ReactDOM.render(<App/>, root);
