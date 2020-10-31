@@ -6,7 +6,8 @@ import '../css/main.css';
 import {Exercise} from "./common/Exercise";
 import {SortableTable} from "./lab19/1/SortableTable";
 import {FocusChanger} from "./lab22/1/ChangingFocusWithRef";
-import {Viemo} from "./lab27/Viemo";
+import {Viemo} from "./lab27/1/Viemo";
+import {StarWars} from "./lab27/2/StarWars";
 
 const App = () => {
   const lab19exc1Data = [
@@ -30,6 +31,9 @@ const App = () => {
         <h2>**********Lab 27**********</h2>
         <Exercise title={"Exercise 1"}>
           <Viemo/>
+        </Exercise>
+        <Exercise title={"Exercise 2"}>
+          <StarWars id={1}/>
         </Exercise>
       </div>
   )
