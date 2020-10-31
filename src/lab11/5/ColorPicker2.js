@@ -12,21 +12,16 @@ export const ColorPicker2 = () => {
     display: "inline-block",
   };
 
-  function paintDivs() {
+  function paintColorRange() {
     tinycolor("#f00").lighten(100).toString();
     let baseColor = tinycolor(color).lighten(25).toString();
-
-    let divs = [];
-    for (let i = 0; i < 9; i++) {
+    return Array.apply(null, Array(9)).map((entry, index) => {
       const bg = {
         background: tinycolor(baseColor).toRgbString()
       }
-
-      divs.push(<div style={{...baseStyle, ...bg}}/>)
       baseColor = tinycolor(baseColor).darken(3).toString();
-    }
-
-    return divs;
+      return <div key={index} style={{...baseStyle, ...bg}}/>
+    });
   }
 
   return (
@@ -36,7 +31,7 @@ export const ColorPicker2 = () => {
                  onChange={(e) => setColor(e.target.value)}/>
           <div>
             {
-              paintDivs()
+              paintColorRange()
             }
           </div>
 

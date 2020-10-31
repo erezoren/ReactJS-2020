@@ -13,6 +13,7 @@ import {Container} from "./lab16/1/Container";
 import {MyForm} from "./lab16/3/MyForm";
 import {ListContainer} from "./lab16/2/ListContainer";
 import {SortableTable} from "./lab19/1/SortableTable";
+import {FocusChanger} from "./lab19/2/ChangingFocusWithRef";
 
 const App = () => {
   const lab19exc1Data = [
@@ -56,6 +57,10 @@ const App = () => {
         <h2>**********Lab 19**********</h2>
         <Exercise title={"Exercise 1"}>
           <SortableTable data={lab19exc1Data}/>
+        </Exercise>
+        <h2>**********Lab 19**********</h2>
+        <Exercise title={"Exercise 2"}>
+          <FocusChanger/>
         </Exercise>
       </div>
   )

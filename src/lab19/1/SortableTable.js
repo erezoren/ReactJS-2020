@@ -11,7 +11,7 @@ export const SortableTable = (props) => {
   const sortByMe = (index) => {
     setSortDesc(!sortDesc)
     const sortedRows = rows.sort((r1, r2) => {
-      return sortDesc? (_.toString(r1[index])).localeCompare(
+      return sortDesc ? (_.toString(r1[index])).localeCompare(
           _.toString(r2[index])) : (_.toString(r2[index])).localeCompare(
           _.toString(r1[index]))
     });
@@ -21,15 +21,18 @@ export const SortableTable = (props) => {
   return (
       <table>
         <thead style={{backgroundColor: 'yellow', fontWeight: 'bold'}}>
-        {header.map(
-            (col, index) => <td onClick={() => sortByMe(index)}>{col}</td>)}
+        <tr>
+          {header.map(
+              (col, index) => <td key={"h" + index}
+                                  onClick={() => sortByMe(index)}>{col}</td>)}
+        </tr>
         </thead>
         <tbody>
         {
-          rows.map((row) => {
-            return <tr>
+          rows.map((row, index) => {
+            return <tr key={"r" + index}>
               {
-                row.map((cell) => <td>{cell}</td>)
+                row.map((cell) => <td key={cell}>{cell}</td>)
               }
             </tr>
           })
