@@ -4,7 +4,7 @@ var _ = require('lodash');
 
 export const SortableTable = (props) => {
   const {data} = props;
-  const [header, setHeader] = useState(data.shift())
+  const header = data.shift();
   const [rows, setRows] = useState(data);
   const [sortDesc, setSortDesc] = useState(true)
 
