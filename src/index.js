@@ -8,6 +8,7 @@ import {SortableTable} from "./lab19/1/SortableTable";
 import {FocusChanger} from "./lab22/1/ChangingFocusWithRef";
 import {Viemo} from "./lab27/1/Viemo";
 import {StarWars} from "./lab27/2/StarWars";
+import {StarWarsCharacter} from "./lab27/3/StarWarsCharacter";
 
 const App = () => {
   const lab19exc1Data = [
@@ -35,6 +36,10 @@ const App = () => {
         <Exercise title={"Exercise 2"}>
           <StarWars id={1}/>
         </Exercise>
+        <Exercise title={"Exercise 3"}>
+          <StarWarsCharacter cid={1}/>
+        </Exercise>
+
       </div>
   )
 };

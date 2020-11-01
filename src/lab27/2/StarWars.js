@@ -33,7 +33,7 @@ export const StarWars = ({id}) => {
   return (
       <div>
         <div>
-          <input type={'text'} onChange={(e) => setFilmId(e.target.value)}/>
+          <input type={'text'} value={filmId} onChange={(e) => setFilmId(e.target.value)}/>
         </div>
         {film ? <ShowFilmInfo film={film}/> : 'Loading......'}
       </div>
